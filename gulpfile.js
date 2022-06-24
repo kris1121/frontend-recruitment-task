@@ -40,7 +40,7 @@ function jsTask(){
 
 function img() {
     return src('./src/img/*')
-        .pipe(imagemin())
+        .pipe(imagemin(imagemin.gifsicle({interlaced: true})))
         .pipe(dest('dist/img'));
 }
 

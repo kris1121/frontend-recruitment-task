@@ -94,7 +94,7 @@ const onClickHandler = () => {
     checkAndWriteClickToLocalStorage();
     removeTableFromDOM();
     addLoaderToDOM();
-    // addTableToDOM();
+    addTableToDOM();
 }
 
 //modal - section
@@ -288,7 +288,7 @@ const removeTableFromDOM = () => {
 
 const addLoaderToDOM = () => {
     const loader = document.createElement('img');
-    loader.src = "../src/img/load-loading.gif";
+    loader.src = "./dist/img/load-loading.gif";
     loader.setAttribute('id', 'loader');
 
     placeForTable.appendChild(loader)
