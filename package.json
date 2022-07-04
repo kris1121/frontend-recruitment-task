@@ -20,9 +20,11 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "gulp-webp": "^4.0.1"
+    "gulp-webp": "^4.0.1",
+    "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "babel-loader": "^8.2.5",
     "micromodal": "^0.4.10",
     "sass": "^1.52.3"
   }

@@ -10,6 +10,9 @@ const cssnano = require('cssnano');
 var replace = require('gulp-replace');
 const imagemin = require('gulp-imagemin');
 const imagewebp = require('gulp-webp');
+const gulp = require('gulp');
+const webpack = require("webpack-stream");
+const loader = require('babel-loader')
 
 
 // File paths
@@ -28,15 +31,28 @@ function scssTask(){
     ); // put final CSS in dist folder
 }
 
-function jsTask(){
-    return src([
-        files.jsPath, 'node_modules/micromodal/dist/micromodal.es.js'
-        ])
-        .pipe(concat('all.js'))
-        .pipe(uglify())
-        .pipe(dest('dist')
-    );
-}
+function jsTask() {
+    return gulp
+    .src('./src/js/main.js')
+      .pipe(
+        webpack({
+          output: {
+            path: __dirname + '/dist',
+            filename: 'all.js'
+          },
+           experiments: {
+            topLevelAwait: true
+          },
+          module: {
+            rules: [{
+              test: /\.js$/,
+              loader: 'babel-loader',
+            }]
+          }
+        })
+      )
+      .pipe(gulp.dest('dist/'));
+  }
 
 function img() {
     return src('./src/img/*')
