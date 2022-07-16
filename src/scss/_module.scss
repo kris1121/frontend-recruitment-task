@@ -1,0 +1,113 @@
+.module {
+    margin: 0 auto;
+    height: 100vh;
+    max-width: 1440px;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+
+    @media screen and(max-width: 1000px) {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.module__left_container {
+    width: 51%;
+
+    @media screen and(max-width: 1000px) {
+       width: 95%; 
+       margin: 0 auto;
+    }
+
+    @media screen and(min-width: 1440px) {
+        width: 735px;
+    }    
+}
+
+.module__right_container {
+    width: 49%;
+
+    @media screen and(max-width: 1000px) {
+        width: 95%; 
+        margin: 0 auto;
+     }
+
+    @media screen and(min-width: 1440px) {
+        width: 705px;
+    }
+}
+
+img {
+    display: block;
+    margin-top: 96px;
+    margin-left: auto;
+    width: 505px;
+    height: 330px;
+
+    @media screen and(max-width: 1000px) {
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.module__title {
+    margin-top: 136px;
+    margin-bottom: 0;
+    margin-left: 95px;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 50.4px;
+    color: #121212;
+
+    @media screen and(max-width: 1000px) {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 20px;
+        text-align: center;
+     }
+}
+
+.module__content {
+    margin-top: 24px;
+    margin-bottom: 0;
+    margin-left: 95px;
+    width: 380px;
+    height: 96px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #121212;
+
+    @media screen and(max-width: 1000px) {
+        width: 95%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 20px;
+        text-align: center; 
+     }
+}
+
+.module__button {
+    margin-top: 32px;
+    margin-left: 95px;
+    width: 128px;
+    height: 48px;
+    border-radius: 32px;
+    padding: 16px 40px;
+    border: none;
+    background-color: #E4C1AE;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+
+    @media screen and(max-width: 1000px) {
+        margin-left: calc(50% - 64px);
+        margin-top: 20px;
+        margin-bottom: 20px;
+     }
+}
